@@ -10,7 +10,9 @@
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
         }
-
+        * :not(h1, h2, h3, small, a){
+            font-size: 18px;
+        }
         .main-container {
             width: 70%;
             margin: auto;
@@ -24,7 +26,7 @@
             page-break-inside: avoid;
             font-family: monospace;
             line-height: 1;
-            margin: .5em;
+            margin: .3em;
             max-width: fit-content;
             overflow: auto;
             padding: 1em;
@@ -43,7 +45,7 @@
         }
 
         h1 {
-            margin: 10px 0;
+            margin: 20px 0 10px 0;
         }
 
         img {
@@ -60,6 +62,14 @@
             color: #8f8f8f;
             font-style: italic;
         }
+
+        ul {
+            list-style: none;
+        }
+
+        hr {
+            margin: 10px 0;
+        }
     </style>
     <title>GIT & GitHub</title>
 </head>
@@ -69,18 +79,18 @@
         <h1>1. Instalando o GIT</h1>
 
         <h2>Windows: </h2>
-        <p>Abra o executável, confirm confirm confirm.</p>
+        <p>Baixe o executável do <a href="https://gitforwindows.org/" target="_blank">GIT</a> e realize a instalação normalmente, sem alterar as opções padrão.</p>
 
         <h2>Ubuntu: </h2>
         <p>No terminal:<br>
             <span class="code">$ sudo apt install git</span>
-            <small>Não copie o "$".</small>
+            <small>Não copie o "$". <a href="https://git-scm.com/downloads/linux" target="_blank">Outras distribuições Linux.</a></small>
         </p>    
 
         <h1>2. Verificando se o GIT está instalado corretamente</h1>
 
         <h2>Windows:</h2>
-        <p>Clique com o botão direito na área de trabalho e abra "git script". Digite: <br>
+        <p>Clique com o botão direito na área de trabalho e selecione <span class="code1">git bash</span> ou abra o Windows Power Shell. Digite: <br>
             <span class="code">$ git --version</span>
         </p>
 
@@ -95,17 +105,23 @@
         
         <h1>3. Configurando o GIT</h1>        
         <p>
-            Caso não possua, criar conta no <a href="https://github.com/signup">GitHub</a>.<br>
+            Caso não possua, criar conta no <a href="https://github.com/signup" target="_blank">GitHub</a>.<br>
             Execute os seguintes comandos, um por um:
             <span class="code">
                 $ git config --global user.name *SEU NOME DE USUÁRIO*
                 <br>$ git config --global user.email *EMAIL-DO-GITHUB@EXEMPLO.COM*
             </span>
-            <small>Lembre-se de substituir os campos. O nome de usuário NÂO precisa ser o mesmo do GitHub.</small>
+            <small>Lembre-se de substituir os campos. O nome de usuário NÂO precisa ser o mesmo do GitHub. No seu computador pessoal, o processo será realizado apenas uma vez. Caso contrário, você pode repetir o processo (ex.: computadores dos laboratórios).</small><br><br>
+            Você pode checar se tudo ocorreu bem com o comando:
+            <span class="code">
+                $ git config --list
+            </span>
+            Exemplo:
+            <img src="https://github.com/nuvem66/noticias/blob/main/2024-10-10_13-58.png?raw=true" alt="">
         </p>
 
         <h1>4. Clonando repositórios do GitHub usando o GIT</h1>
-        <p>Crie um novo repositório no GitHub chamado de "noticias":
+        <p>Crie um novo repositório no GitHub chamado "noticias":
         <img src="https://github.com/nuvem66/noticias/blob/main/2024-10-10_03-08.png?raw=true" alt="">
         Escolha um diretório para clonar os aquivos. Recomenda-se criar uma pasta chamada <span class="code1">workspace</span> em <span class="code1">C:/</span> (Windows) ou <span class="code1">/home/*NOMEDOUSUARIOLINUX*/</span> (Linux). Abra essa pasta no terminal (use o comando <span class="code1">cd</span> para navegar até o diretório ou abra um gerenciador de arquivos e, ao clicar com o botão direito, "Abrir terminal/cmd").
         <img src="https://github.com/nuvem66/noticias/blob/main/2024-10-10_03-37.png?raw=true" alt="">
@@ -126,6 +142,16 @@
         </p>
 
         <h1>6. Sincronizando VSCode e GitHub usando o GIT</h1>
+        <p>Abra seu <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer"></a> na pasta escolhida. 
+        </p>
+        <hr>
+        <h3>Links úteis:</h3>
+        <ul>
+            <li>
+                <a href="https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup" target="_blank">https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup</a>
+            </li>
+        </ul>
+        
     </main>
 </body>
 </html>
