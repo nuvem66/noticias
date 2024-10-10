@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .main-container {
+            width: 70%;
+            margin: auto;
+            padding: 20px 0;
+        }
+
+        .code {
+            background: #f4f4f4;
+            border: 1px solid #ddd;
+            color: #666;
+            page-break-inside: avoid;
+            font-family: monospace;
+            line-height: 1;
+            margin: .5em;
+            max-width: fit-content;
+            overflow: auto;
+            padding: 1em;
+            display: block;
+            word-wrap: break-word;
+        }
+
+        .code1 {
+            background: #f4f4f4;
+            border: 1px solid #ddd;
+            color: #666;
+            page-break-inside: avoid;
+            font-family: monospace;
+            line-height: 1;
+            overflow: auto;
+        }
+
+        h1 {
+            margin: 10px 0;
+        }
+
+        img {
+            max-width: 100%;
+            margin: 1em;
+            border: 1px solid black;
+        }
+
+        h2 {
+            margin: 10px 0;
+        }
+        
+        small {
+            color: #8f8f8f;
+            font-style: italic;
+        }
+    </style>
+    <title>GIT & GitHub</title>
+</head>
+<body>
+    <main class="main-container">
+        
+        <h1>1. Instalando o GIT</h1>
+
+        <h2>Windows: </h2>
+        <p>Abra o executável, confirm confirm confirm.</p>
+
+        <h2>Ubuntu: </h2>
+        <p>No terminal:<br>
+            <span class="code">$ sudo apt install git</span>
+            <small>Não copie o "$".</small>
+        </p>    
+
+        <h1>2. Verificando se o GIT está instalado corretamente</h1>
+
+        <h2>Windows:</h2>
+        <p>Clique com o botão direito na área de trabalho e abra "git script". Digite: <br>
+            <span class="code">$ git --version</span>
+        </p>
+
+        <h2>Linux:</h2>
+        <p>No terminal: 
+            <span class="code">$ git --version</span>
+        </p>
+
+        <h2>Ambos devem resultar em algo parecido com:</h2>
+        <img src="https://github.com/nuvem66/noticias/blob/main/2024-10-10_03-38.png?raw=true" alt="">
+        <br><small>A versão pode variar.</small>
+        
+        <h1>3. Configurando o GIT</h1>        
+        <p>
+            Caso não possua, criar conta no <a href="https://github.com/signup">GitHub</a>.<br>
+            Execute os seguintes comandos, um por um:
+            <span class="code">
+                $ git config --global user.name *SEU NOME DE USUÁRIO*
+                <br>$ git config --global user.email *EMAIL-DO-GITHUB@EXEMPLO.COM*
+            </span>
+            <small>Lembre-se de substituir os campos. O nome de usuário NÂO precisa ser o mesmo do GitHub.</small>
+        </p>
+
+        <h1>4. Clonando repositórios do GitHub usando o GIT</h1>
+        <p>Crie um novo repositório no GitHub chamado de "noticias":
+        <img src="https://github.com/nuvem66/noticias/blob/main/2024-10-10_03-08.png?raw=true" alt="">
+        Escolha um diretório para clonar os aquivos. Recomenda-se criar uma pasta chamada <span class="code1">workspace</span> em <span class="code1">C:/</span> (Windows) ou <span class="code1">/home/*NOMEDOUSUARIOLINUX*/</span> (Linux). Abra essa pasta no terminal (use o comando <span class="code1">cd</span> para navegar até o diretório ou abra um gerenciador de arquivos e, ao clicar com o botão direito, "Abrir terminal/cmd").
+        <img src="https://github.com/nuvem66/noticias/blob/main/2024-10-10_03-37.png?raw=true" alt="">
+        <br>Copie o link do seu repositório:
+        <img src="https://github.com/nuvem66/noticias/blob/main/2024-10-10_03-31.png?raw=true" alt="">
+        Com o link do seu repo em mãos, você pode cloná-lo com o seguinte comando:
+        <span class="code">
+            $ git clone *linkdorepositorio*   
+        </span>
+        Exemplo (meu repositório):
+        <span class="code">
+            $ git clone https://github.com/nuvem66/noticias.git   
+        </span>
+        <small>Tenha certeza de que você está na pasta correta, pois a clonagem ocorre lá!</small>
+        <br><br>
+        É possível verificar se a clonagem foi bem-sucedida abrindo a pasta escolhida. Ultilize seu gerenciador de arquivos ou o comando <span class="code1">ls</span>:
+        <img src="https://github.com/nuvem66/noticias/blob/main/2024-10-10_03-49.png?raw=true" alt="">
+        </p>
+
+        <h1>6. Sincronizando VSCode e GitHub usando o GIT</h1>
+    </main>
+</body>
+</html>
